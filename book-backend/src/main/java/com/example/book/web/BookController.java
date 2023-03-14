@@ -25,6 +25,7 @@ public class BookController {
         return new ResponseEntity<>(bookService.모두가져오기(), HttpStatus.OK);
     }
 
+    @CrossOrigin
     @GetMapping("/book/{id}")
     public ResponseEntity<?> findById(@PathVariable Long id) {
         return new ResponseEntity<>(bookService.한건가져오기(id), HttpStatus.OK);
